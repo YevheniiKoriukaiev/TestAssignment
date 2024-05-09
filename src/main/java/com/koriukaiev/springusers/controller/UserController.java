@@ -4,6 +4,7 @@ package com.koriukaiev.springusers.controller;
 import com.koriukaiev.springusers.model.User;
 import com.koriukaiev.springusers.service.implementation.InMemoryUserService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +17,17 @@ import java.util.List;
 public class UserController {
 
     private final InMemoryUserService service;
+//    @Value("${user.ageLimit}")
+//    private int ageLimit;
+//
+//    @PostMapping("/register")
+//    public String registerUser(@RequestBody User user) {
+//        if (user.getAge() >= ageLimit) {
+//            return "User registered successfully!";
+//        } else {
+//            return "User must be at least " + ageLimit + " years old.";
+//        }
+//    }
 
     @GetMapping
     public List<User> findAllUsers() {

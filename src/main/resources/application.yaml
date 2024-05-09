@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/UsersDB
+    url: jdbc:mysql://localhost:3306/UserDB
     username: root
     password: evgeniy29
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -8,7 +8,7 @@ spring:
     hibernate:
       ddl-auto: update
     database: MySql
-    database-platform: org.hibernate.dialect.MySqlDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: false
     properties:
       hibernate:
